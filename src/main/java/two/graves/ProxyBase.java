@@ -35,6 +35,7 @@ public class ProxyBase {
   /* Initialization list for content that needs post-initialization. */
   protected ArrayList<InitializableModContent> pendingInitialization = new ArrayList<InitializableModContent>();
   protected final AtomicInteger networkID = new AtomicInteger(0);
+  final int graveChannelID = networkID.getAndIncrement();
 
   public ProxyBase() {
   }
@@ -58,9 +59,7 @@ public class ProxyBase {
   }
 
   protected void registerNetwork() {
-    final int graveID = networkID.getAndIncrement();
-    Graves.networkChannel.registerMessage(PacketForceEquipItems.class, PacketForceEquipItems.class, graveID, Side.CLIENT);
-    Graves.networkChannel.registerMessage(PacketForceEquipItems.class, PacketForceEquipItems.class, graveID, Side.SERVER);
+    Graves.networkChannel.registerMessage(PacketForceEquipItems.class, PacketForceEquipItems.class, graveChannelID, Side.CLIENT);
   }
 
   protected void registerInventoryHandlers() {

@@ -5,9 +5,9 @@ package two.graves.network;
 
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.network.simpleimpl.IMessage;
-import cpw.mods.fml.common.network.simpleimpl.IMessageHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import io.netty.buffer.ByteBuf;
 import java.util.Deque;
 import java.util.LinkedList;
@@ -21,7 +21,7 @@ import two.graves.tiles.TileGrave;
  *
  * @author Two
  */
-public class PacketForceEquipItems implements IMessage, IMessageHandler<PacketForceEquipItems, PacketForceEquipItems> {
+public class PacketForceEquipItems extends ForceEquipMessageHandlerBase implements IMessage {
 
   protected final Deque<InventoryContent> inventoryContent;
 
@@ -59,6 +59,7 @@ public class PacketForceEquipItems implements IMessage, IMessageHandler<PacketFo
     }
   }
 
+  @SideOnly(Side.CLIENT)
   @Override
   public PacketForceEquipItems onMessage(final PacketForceEquipItems message, final MessageContext ctx) {
     if (ctx.side == Side.CLIENT) {
