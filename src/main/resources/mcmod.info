@@ -1,0 +1,16 @@
+[
+{
+  "modid" : "TwoGraves",
+  "name" : "Graves",
+  "description": "At your death items are put into a grave chest",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "http://www.minecraftforum.net/topic/2219062-",
+  "updateUrl": "",
+  "authors": ["Two"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

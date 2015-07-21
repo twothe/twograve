@@ -1,0 +1,8 @@
+itemGroup.Graves=Graves
+
+language.name=English
+language.region=US
+language.code=en_US
+
+tile.grave.name=Grave
+notyourgrave=Rest in peace %s
