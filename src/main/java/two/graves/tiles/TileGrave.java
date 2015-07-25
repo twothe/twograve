@@ -31,6 +31,7 @@ public class TileGrave extends TileEntity {
   protected static final String KEY_OWNER = "GraveOwner";
   protected static final String KEY_INVENTORY = "GraveInventory";
   protected static final String KEY_LOCALIZATION_NOTYOURGRAVE = "notyourgrave";
+  protected static final String KEY_LOCALIZATION_UNKNOWN_GRAVE = "unknownGrave";
 
   protected final LinkedList<InventoryContent> inventoryContent;
   protected String ownerName;
@@ -38,6 +39,7 @@ public class TileGrave extends TileEntity {
   public TileGrave() {
     super();
     this.inventoryContent = new LinkedList<InventoryContent>();
+    this.ownerName = LanguageRegistry.instance().getStringLocalization(KEY_LOCALIZATION_UNKNOWN_GRAVE); // placeholder in case this block is placed in any other way but by a player
   }
 
   @Override

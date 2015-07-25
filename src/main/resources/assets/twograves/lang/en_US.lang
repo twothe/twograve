@@ -6,3 +6,4 @@ language.code=en_US
 
 tile.grave.name=Grave
 notyourgrave=Rest in peace %s
+unknownGrave=unknown adventurer
