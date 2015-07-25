@@ -20,7 +20,7 @@ public class Graves {
 
   public static final String MOD_NAME = "Graves";
   public static final String MOD_ID = "TwoGraves";
-  public static final String MOD_VERSION = "1710.1.0";
+  public static final String MOD_VERSION = "1710.1.1";
   //----------------------------------------------------------------------------
   @Mod.Instance("TwoGraves")
   public static Graves instance;
